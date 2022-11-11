@@ -57,13 +57,15 @@ const deleteMatch = async (req, res) => {
     // Check if is valid match object 
     if (!mogoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({ error: 'Match not found' })
+    }// Find and delete match object 
+
+    try {
+        const match = await Matches.findOneAndDelete({ _id: id })
+        res.status(200).json(match)
+    } catch (error) {
+        res.status(404).json({ error: 'Match not found' })
     }
-    // Find and delete match object 
-    const match = await Matches.findOneAndDelete({ _id: id })
-    if (!match) {
-        return res.status(404).json({ error: 'Match not found' })
-    }
-    res.status(200)
+
 }
 
 // 'GET list of top 5 Winners'
