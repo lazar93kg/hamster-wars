@@ -1,6 +1,6 @@
 const express = require('express')
 
-const { getWinners, getlosers, getMatches, getMatchWinner, createMatch, deleteMatch, getOneMatch } = require('../controllers/matchesController')
+const { getWinners, getlosers, getMatches, getMatchWinner, getOneMatch, createMatch, deleteMatch } = require('../controllers/matchesController')
 
 
 const router = express.Router()
