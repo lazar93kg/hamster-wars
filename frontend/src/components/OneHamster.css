@@ -1,0 +1,36 @@
+.oneHamster {
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.oneHamster h4 {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.oneHamsterProprety {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1024px;
+    height: 520px;
+    background-color: #3292ad;
+}
+
+.oneHamsterProprety img {
+    width: 500px;
+    height: 400px;
+
+}
+
+.icon {
+    background-color: none;
+
+}
+
+.oneHamText h4 {
+    margin: 20px 0px;
+
+}
